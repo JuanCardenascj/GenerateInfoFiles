@@ -25,13 +25,12 @@ public class GenerateInfoFiles {
             createSalesManInfoFile(10);
             createProductsFile(10);
 
-            // Create bucle
-        int totalSalesmen = 10;
-        for (int i = 0; i < totalSalesmen; i++) {
-            long id = 1001 + i;
-            createSalesMenFile(10, "Salesman" + i, id);
-        }
-
+            // Create individual sales files for each salesman
+            int totalSalesmen = 10;
+            for (int i = 0; i < totalSalesmen; i++) {
+                long id = 1001 + i;
+                createSalesMenFile(10, "Salesman" + i, id);
+            }
 
             System.out.println("Files generated successfully ✅");
 
@@ -58,13 +57,14 @@ public class GenerateInfoFiles {
     public static void createSalesManInfoFile(int salesmanCount) throws IOException {
 
         FileWriter writer = new FileWriter("data/salesmen.txt");
+        Random random = new Random();
 
         int baseId = 1001;
 
         for (int i = 0; i < salesmanCount; i++) {
-
-            String firstName = firstNames[i % firstNames.length];
-            String lastName = lastNames[i % lastNames.length];
+            // Pseudo-random selection of names
+            String firstName = firstNames[random.nextInt(firstNames.length)];
+            String lastName = lastNames[random.nextInt(lastNames.length)];
 
             writer.write("CC;" + (baseId + i) + ";" + firstName + ";" + lastName + "\n");
         }
@@ -108,12 +108,8 @@ public class GenerateInfoFiles {
 
         // Sales records (Based on real products)
         for (int i = 1; i <= productNames.length; i++) {
-
             int quantity = random.nextInt(10) + 1;
-
-            if (quantity > 0) {
-                writer.write(i + ";" + quantity + ";\n");
-            }
+            writer.write(i + ";" + quantity + ";\n");
         }
 
         writer.close();

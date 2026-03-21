@@ -9,7 +9,7 @@ import java.util.Random;
  * - Salesmen information file
  * - Products information file
  * - Individual sales files per salesman
- */
+ */ //prueba github
 public class GenerateInfoFiles {
 
     private static final String DATA_FOLDER = "data";

@@ -1,0 +1,59 @@
+PROJECT CONCLUSIONS
+
+
+Project: Data generation and classification
+Module: Fundamental Programming Concepts
+Subgroup 14
+Date: 27/04/2026
+
+1. WHAT YOU LEARNED DURING THE DEVELOPMENT OF THE PROJECT
+
+- Handling text files in Java with BufferedReader, BufferedWriter, FileReader and FileWriter.
+
+- Use of collections such as HashMap and ArrayList to store and relate information.
+
+- Implementation of descending ordering with Comparator and lambda expressions.
+
+- Validation of input data: verify that the product IDs exist, that the quantities are positive and that the prices are not negative.
+
+- Professional documentation with JavaDoc.
+
+- Good programming practices: spacing, variable names, separation in short methods.
+
+- Version control with Git and collaborative work on GitHub.
+
+- Organization of the project in folders (data, src) separating the generation of data from the processing.
+
+
+
+2. POSSIBLE APPLICATIONS IN PROFESSIONAL LIFE
+
+- Development of point of sale (POS) and billing systems.
+
+- Batch processing in banks, logistics or e-commerce.
+
+- Automatic generation of sales reports, ranking of sellers and best-selling products.
+
+- Validation and cleaning of data in ETL (Extraction, Transformation, Loading) processes.
+
+- Automation of repetitive tasks with file input/entry.
+
+- Creation of test data to simulate real environments.
+
+
+
+3. DIFFICULTIES PRESENTED DURING DEVELOPMENT
+
+- Sales file format: the sales line ends with a semicolon, which complicated the split. It was solved by normalizing each line before processing.
+
+- Descending ordering: at the beginning it was obtained ascending; it was corrected by reversing the comparison.
+
+- Validate that product IDs exist: HashMap verification was added before processing each sale.
+
+- Coordination between team members using different IDEs (Eclipse vs VSCode); VSCode was standardized.
+
+- Compliance with deadlines due to working hours; daily brief meetings and division of tasks were organized.
+
+
+
+The team completed all the mandatory requirements (documentation, good practices, file generation, ordered reports) and extras such as validations. The program runs without user intervention and shows success/error messages.
